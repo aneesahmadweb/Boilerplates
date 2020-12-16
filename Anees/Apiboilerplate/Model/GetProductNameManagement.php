@@ -13,9 +13,16 @@ class GetProductNameManagement implements \Anees\Apiboilerplate\Api\GetProductNa
     /**
      * {@inheritdoc}
      */
-    public function getGetProductName()
+    public function getGetProductName($sku)
     {
-        return 'hello api GET return ' ;
+        $productsku = $sku;
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $product = $objectManager->get('Magento\Catalog\Api\ProductRepositoryInterface')->get($productsku);
+        $na=$product->getName();
+        return $na;
+
     }
+
+
 }
 

@@ -12,9 +12,16 @@ interface GetProductNameManagementInterface
 
     /**
      * GET for GetProductName api
-
+     * @param string $param
      * @return string
      */
-    public function getGetProductName();
+    public function getGetProductName($sku);
+
+    /**
+     * GET for produt price api
+     * @param string $param
+     * @return string
+     */
+    public function getGetProductPrice($price);
 }
 
