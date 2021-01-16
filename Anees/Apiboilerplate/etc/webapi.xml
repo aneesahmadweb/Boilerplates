@@ -6,4 +6,12 @@
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
+
+    <route method="GET" url="/V1/Apiboilerplate/getproductprice/:sku">
+        <service class="Anees\Apiboilerplate\Api\GetProductPriceInterface" method="getGetProductPrice"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
 </routes>
